@@ -6,7 +6,7 @@ import Bounce from "react-reveal/Bounce"
 import { useState, useRef, useEffect } from "react"
 import emailjs from "@emailjs/browser"
 import { Helmet } from "react-helmet"
-import
+
 export default function SignupSection() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")

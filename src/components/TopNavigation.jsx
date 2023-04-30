@@ -24,7 +24,7 @@ export default function Topavigation() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#realms">Realms</Nav.Link>
-              <Nav.Link href="#signup">SignUp</Nav.Link>
+              <Nav.Link href="#signup">Signup</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>

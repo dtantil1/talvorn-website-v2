@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./styles/styles.css"
+import "animate.css/animate.min.css"
+import React from "react"
+import TopNavigation from "./components/TopNavigation"
+import MottoSection from "./components/MottoSection"
+import WhatWeDoSection from "./components/WhatWeDoSection"
+import RealmsSection from "./components/RealmsSection"
+import AboutSection from "./components/AboutSection"
+import FooterSection from "./components/FooterSection"
+import SignupSection from "./components/SignupSection"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <TopNavigation />
+      <MottoSection />
+      <WhatWeDoSection />
+
+      <RealmsSection />
+      <SignupSection />
+      <AboutSection />
+      <FooterSection />
+    </>
+  )
 }
 
-export default App;
+export default App

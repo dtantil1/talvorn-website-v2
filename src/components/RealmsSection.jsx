@@ -33,7 +33,7 @@ export default function RealmsSection() {
                     traditional gaming experience.
                   </p>
 
-                  <a href="/contact" className="hollow-button">
+                  <a href="#signup" className="hollow-button">
                     Sign Up
                   </a>
                 </Zoom>
@@ -56,7 +56,7 @@ export default function RealmsSection() {
                     creating a truly interactive and engaging gameplay
                     experience.
                   </p>
-                  <a href="/contact" className="hollow-button all-caps">
+                  <a href="#signup" className="hollow-button all-caps">
                     SIGN UP
                   </a>
                 </Zoom>

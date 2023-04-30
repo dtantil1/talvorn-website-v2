@@ -29,7 +29,7 @@ export default function MottoSection() {
             </div>
 
             <div data-ix="fade-in-bottom-page-loads">
-              <a href="/contact" className="button">
+              <a href="#signup" className="button">
                 sign up
               </a>
               <button

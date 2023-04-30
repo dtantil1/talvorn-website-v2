@@ -23,8 +23,8 @@ export default function Topavigation() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#company">Company</Nav.Link>
               <Nav.Link href="#realms">Realms</Nav.Link>
+              <Nav.Link href="#signup">SignUp</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>

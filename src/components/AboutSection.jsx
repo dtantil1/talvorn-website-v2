@@ -1,7 +1,7 @@
 import React from "react"
 import twitter_icon from "../images/twitter_icon.svg"
 export default function AboutSection() {
-  const twitter_link = "https://twitter.com/"
+  const twitter_link = "https://twitter.com/talvorncorp"
   return (
     <>
       <div className="footer wf-section" id="about">

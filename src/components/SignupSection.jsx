@@ -3,12 +3,28 @@ import modern_warrior from "../images/modern_warrior.png"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Bounce from "react-reveal/Bounce"
+import { useState } from "react"
 export default function SignupSection() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [disabled, setDisabled] = useState(false)
+  const [message, setMessage] = useState("")
+
+  function submitHandler(event) {
+    event.preventDefault() // 👈️ prevent page refresh
+    const formName = event.target[0].value
+    const formEmail = event.target[1].value
+    setName(formName)
+    setEmail(formEmail)
+    setMessage(`Welcome ${formName}! You've been signed up using: ${formEmail}`)
+    setDisabled(true)
+  }
   return (
     <>
       <div
         className="section wf-section"
         style={{ backgroundColor: "#112442" }}
+        id="signup"
       >
         <Bounce left>
           <img
@@ -30,65 +46,37 @@ export default function SignupSection() {
             </div>
 
             <div>
-              <Form>
+              <Form onSubmit={submitHandler}>
                 <Form.Group className="mb-3" controlId="Name">
                   {/* <Form.Label style={{ color: "white" }}>Name</Form.Label> */}
-                  <Form.Control type="text" placeholder="Enter name" required />
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter name"
+                    required
+                    disabled={disabled}
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  {/* <Form.Label style={{ color: "white" }}>
-                  Email address
-                </Form.Label> */}
                   <Form.Control
                     type="email"
                     placeholder="Enter email"
                     required
+                    disabled={disabled}
                   />
                 </Form.Group>
-
-                {/* <input
-                type="text"
-                className="form-field w-input"
-                maxLength={256}
-                name="Name"
-                data-name="Name"
-                placeholder="Enter your name..."
-                id="Name"
-                required
-              />
-              <input
-                type="email"
-                className="form-field w-input"
-                maxLength={256}
-                name="Email"
-                data-name="Email"
-                placeholder="Enter your email..."
-                id="Email"
-                required
-              />
-              <textarea
-                id="field-2"
-                name="field-2"
-                placeholder="Message"
-                maxLength={5000}
-                data-name="Field 2"
-                className="form-field text-area w-input"
-              ></textarea> */}
                 <Button
                   type="submit"
                   style={{ backgroundColor: "blue" }}
                   data-wait="Please wait..."
                   className="button full-width w-button"
+                  disabled={disabled}
                 >
                   Send Carrier Pigeon
                 </Button>
+                <p style={{ color: "red", marginTop: 10, fontSize: 18 }}>
+                  {message}
+                </p>
               </Form>
-              {/* <div className="w-form-done">
-              <p>Thank you! Your submission has been received!</p>
-            </div>
-            <div className="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form :(</p>
-            </div> */}
             </div>
           </div>
         </Bounce>

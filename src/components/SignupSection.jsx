@@ -6,6 +6,7 @@ import Bounce from "react-reveal/Bounce"
 import { useState, useRef, useEffect } from "react"
 import emailjs from "@emailjs/browser"
 import { Helmet } from "react-helmet"
+import { Link } from "react-router-dom"
 
 export default function SignupSection() {
   const [name, setName] = useState("")
@@ -111,6 +112,9 @@ export default function SignupSection() {
               </Form>
             </div>
           </div>
+          <p style={{ color: "whitesmoke" }}>
+            <Link to="/privacy#logo">Privacy Policy</Link>
+          </p>
         </Bounce>
       </div>
     </>

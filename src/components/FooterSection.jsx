@@ -1,13 +1,12 @@
 import React from "react"
+import { COMPANY } from "../site"
 
 export default function FooterSection() {
   return (
-    <>
-      <div className="footer center wf-section">
-        <div className="w-container">
-          <div className="footer-text">© 2023 Talvorn Corporation</div>
-        </div>
+    <footer className="footer">
+      <div className="wrap">
+        © {new Date().getFullYear()} {COMPANY}
       </div>
-    </>
+    </footer>
   )
 }

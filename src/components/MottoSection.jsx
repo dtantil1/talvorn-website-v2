@@ -1,48 +1,34 @@
 import React from "react"
-import Zoom from "react-reveal/Zoom"
+import warrior from "../images/modern_warrior.webp"
+import { PRODUCT, PRODUCT_URL } from "../site"
+
 export default function MottoSection() {
-  const handleClickScroll = () => {
-    const element = document.getElementById("realms")
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
   return (
-    <>
-      <div className="hero-section centered wf-section" id="home">
-        <div
-          data-w-id="e464d218-f801-55d1-1f50-7da00b5bfb8f"
-          style={{ opacity: 1 }}
-          className="w-container"
-        >
-          <Zoom bottom>
-            <h1 data-ix="fade-in-bottom-page-loads" className="hero-heading">
-              Talvorn
-            </h1>
-
-            <div
-              data-ix="fade-in-bottom-page-loads"
-              className="hero-subheading"
-            >
-              unleash your inner hero
-            </div>
-
-            <div data-ix="fade-in-bottom-page-loads">
-              <a href="#signup" className="button">
-                sign up
-              </a>
-              <button
-                style={{ backgroundColor: "transparent" }}
-                className="hollow-button all-caps"
-                onClick={handleClickScroll}
-              >
-                learn more
-              </button>
-            </div>
-          </Zoom>
+    <section className="hero" id="home">
+      <div className="hero__art">
+        <img
+          src={warrior}
+          width="1024"
+          height="1536"
+          alt="Armored warrior in a golden cape with a glowing blue visor, holding a long sword"
+        />
+      </div>
+      <div className="hero__copy">
+        <h1 className="hero__title">Talvorn</h1>
+        <p className="hero__motto">Unleash your inner hero</p>
+        <p className="hero__intro">
+          We build mobile games. Right now that means {PRODUCT}: team fitness
+          challenges and weekly boss fights.
+        </p>
+        <div className="hero__actions">
+          <a className="button" href={PRODUCT_URL}>
+            Sign up at mobfit.io
+          </a>
+          <a className="text-link" href="#mobfit">
+            Learn more
+          </a>
         </div>
       </div>
-    </>
+    </section>
   )
 }

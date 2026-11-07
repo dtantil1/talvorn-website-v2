@@ -1,3 +1,15 @@
+# Talvorn Group LLC website
+
+The company site for Talvorn Group LLC, makers of [MobFit](https://mobfit.io).
+
+## Deploying
+
+The site is hosted on [Vercel](https://vercel.com) at [talvorn.io](https://talvorn.io). Import this repository as a new project and Vercel detects Create React App on its own (build command `npm run build`, output directory `build`), so no `vercel.json` is needed.
+
+Vercel builds with `CI` set, which makes `react-scripts` treat lint warnings as errors. Run `CI=1 npm run build` to check locally before pushing.
+
+The company and product names and the product URL live in `src/site.js`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
